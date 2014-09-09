@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Steam nickname:</b>
+  <%= @user.steam_nickname %>
+</p>
+
+<p>
+  <b>Steam:</b>
+  <%= @user.steam_id %>
+</p>
+
+<p>
+  <b>Steam image:</b>
+  <%= @user.steam_image %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,18 @@
+<h1 id='home-page-title'>UK Dota App</h1>
+
+<div id='log-in-with-steam'>
+  <h2 id='log-in-with-steam-header'>Please log in with steam</h2>
+  <%= link_to image_tag("http://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_large_border.png"), '/auth/steam' %>
+</div>
+
+<% if session.key? :current_user %>
+<h3>Logged in as:</h3>
+<p><%= session[:current_user][:nickname] %></p>
+<%= image_tag session[:current_user][:image] %>
+<% end %>
+
+<ul>
+<% @matchlist.each do |match| %>
+<li><%= Date.strptime(match['start_time'].to_s, '%s').to_formatted_s(:rfc822) %> - <%= match['match_id'] %></li>
+<% end %>
+</ul>

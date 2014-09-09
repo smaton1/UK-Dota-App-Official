@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  steam_nickname: MyString
+  steam_id: 1
+  steam_image: MyString
+
+two:
+  name: MyString
+  steam_nickname: MyString
+  steam_id: 1
+  steam_image: MyString
