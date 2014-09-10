@@ -11,10 +11,6 @@
 <%= image_tag session[:current_user][:image] %>
 <% end %>
 
-<ul>
-<% @matchlist.each do |match| %>
-<li><%= Date.strptime(match['start_time'].to_s, '%s').to_formatted_s(:rfc822) %> - <%= match['match_id'] %></li>
-<% end %>
-</ul>
+
 
 

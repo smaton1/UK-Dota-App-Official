@@ -15,6 +15,14 @@
     <button id='add_friend'>Add to friends</button>
   </div>
 
+  <div id='match_history'>
+    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[0]["match_id"]%>">most recent game</a></li>
+    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[1]["match_id"]%>">most recent game</a></li>
+    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[2]["match_id"]%>">most recent game</a></li>
+    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[3]["match_id"]%>">most recent game</a></li>
+    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[4]["match_id"]%>">most recent game</a></li>
+
+  </div>
 
   <div>
   <%= link_to 'Edit', edit_user_path(@user) %> 
