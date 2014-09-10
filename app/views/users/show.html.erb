@@ -1,25 +1,22 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Steam nickname:</b>
-  <%= @user.steam_nickname %>
-</p>
-
-<p>
-  <b>Steam:</b>
-  <%= @user.steam_id %>
-</p>
-
-<p>
-  <b>Steam image:</b>
-  <%= @user.steam_image %>
-</p>
+<div id='profile_page'>
+  <div id='general_info'>
+    <p class='general_info_specifics'>
+      <%= image_tag @user.steam_image %>
+    </p>
+    <p class='general_info_specifics'>
+      <b>Steam name:</b>
+      <%= @user.steam_nickname %>
+    </p>
+    <p class='general_info_specifics'>
+      <b>Steam Id:</b>
+      <%= @user.steam_id %>
+    </p>
+    <button id='add_friend'>Add to friends</button>
+  </div>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <div>
+  <%= link_to 'Edit', edit_user_path(@user) %> 
+  </div>
+</div>
