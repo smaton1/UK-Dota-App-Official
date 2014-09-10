@@ -10,7 +10,7 @@ gem 'unirest'
 gem 'omniauth-steam'
 gem 'figaro'
 gem 'pry-rails'
-
+gem 'gon'
 
 # Gems used only for assets and not required
 # in production environments by default.

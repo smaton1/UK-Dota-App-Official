@@ -6,4 +6,5 @@ class ApplicationController < ActionController::Base
 
     @current_user ||= User.find_by_steam_nickname session[:current_user][:nickname] if session[:current_user][:nickname]
   end
+
 end

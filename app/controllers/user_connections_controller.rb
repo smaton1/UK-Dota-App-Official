@@ -56,6 +56,7 @@ class UserConnectionsController < ApplicationController
   # PUT /user_connections/1
   # PUT /user_connections/1.json
   def update
+    
     @user_connection = UserConnection.find(params[:id])
 
     respond_to do |format|

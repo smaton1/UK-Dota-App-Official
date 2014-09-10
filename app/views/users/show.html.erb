@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
+<% if @user.id == current_user.id %>
+    <button id='show_profile'>Profile</button> | <button id='show_friends_list'>Friends</button>
+  <%end%>
 <div id='profile_page'>
+  
   <div id='general_info'>
     <p class='general_info_specifics'>
       <%= image_tag @user.steam_image %>
@@ -13,6 +17,7 @@
       <%= @user.steam_id %>
     </p>
     <button id='add_friend'>Add to friends</button>
+    <div id='hidden_current_user_id'><%= current_user.id %></div>
   </div>
 
   <div id='match_history'>
@@ -27,4 +32,10 @@
   <div>
   <%= link_to 'Edit', edit_user_path(@user) %> 
   </div>
+</div>
+
+<div id='friends_list' class='friends_list_hidden'>
+<h1>Friends List!</h1>
+
+
 </div>
