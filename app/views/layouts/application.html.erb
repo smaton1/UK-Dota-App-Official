@@ -16,8 +16,12 @@
   <nav class="clearfix">  
     <ul class="clearfix"> 
     
-      <li><a href="/">Home</a></li>  
-      <li><a href="/users/4">Profile</a></li>  
+      <li><a href="/">Home</a></li>
+      <% if session.key? :current_user %>  
+      <li><a href="/users/<%=current_user.id%>">Profile</a></li>
+      <%else%>
+      <li><a href="#">Profile</a></li>
+      <%end%>  
       <li><a href="#">My Team</a></li>  
       <li><a href="#">Forum</a></li>  
       <li><a href="#">Reddit-RSS</a></li>  
