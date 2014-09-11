@@ -17,7 +17,12 @@
       <%= @user.steam_id %>
     </p>
     <button id='add_friend'>Add to friends</button>
-    <div id='hidden_current_user_id'><%= current_user.id %></div>
+    <select id="hidden_current_user_id">
+      <option><%= current_user.id %></option>
+    </select>
+    <select id="hidden_user_id">
+      <option><%= @user.id %></option>
+    </select>
   </div>
 
   <div id='match_history'>
@@ -36,6 +41,12 @@
 
 <div id='friends_list' class='friends_list_hidden'>
 <h1>Friends List!</h1>
-
+<% if current_user.user_connections %>
+<% current_user.user_connections.each do |user| %>
+  <% user %>
+  <a href="/users/<%= user.user_2_id %>"><%= User.find(user.user_2_id).steam_nickname %></a>
+ 
+<% end %>
+<% end %>
 
 </div>

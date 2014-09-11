@@ -1,21 +1,16 @@
 $(function(){
   $("#add_friend").on("click", function(){
-
-    data = {user_1_id: 1, connection_id: 2, 'friend': true}
+    data = {user_connection: {user_1_id: parseInt($('#hidden_current_user_id').val()), user_2_id: parseInt($('#hidden_user_id').val()), 'friend': true}}
     path = "/user_connections"
     method = "POST"
-
+    console.log(data)
     $.ajax({
     url: path,
     method: method,
     data: data,
-    dataType: "json"
-    }).success(function(data){  
-        console.log(data)
-        if(data){
-          console.log("hi")
-        }
-  })
+    dataType: "json",
+    });
+ 
 
   });
 

@@ -2,28 +2,17 @@
 
 <table>
   <tr>
-    <th>Name</th>
     <th>Steam nickname</th>
-    <th>Steam</th>
     <th>Steam image</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.name %></td>
-    <td><%= user.steam_nickname %></td>
-    <td><%= user.steam_id %></td>
-    <td><%= user.steam_image %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><a href="/users/<%= user.id %>"><%= user.steam_nickname %></a></td>
+    <td><img src="<%= user.steam_image %>"></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New User', new_user_path %>
