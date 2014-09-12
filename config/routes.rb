@@ -1,5 +1,8 @@
 UKDotaAppOfficial::Application.routes.draw do
 
+  resources :chats
+
+
   resources :user_connections
 
 

@@ -16,7 +16,10 @@
       <b>Steam Id:</b>
       <%= @user.steam_id %>
     </p>
+    <% if @user.id != current_user.id %>
     <button id='add_friend'>Add to friends</button>
+    <button><%= link_to "Chat", chats_path(:id => @user.id, :name => @user.steam_nickname), :id => "chat" %></button>
+    <%end%>
     <select id="hidden_current_user_id">
       <option><%= current_user.id %></option>
     </select>
