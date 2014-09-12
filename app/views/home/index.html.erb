@@ -5,6 +5,7 @@
   <h3>Logged in as:</h3>
   <p><%= session[:current_user][:nickname] %></p>
   <%= image_tag session[:current_user][:image] %>
+  
   <% else %>
   <h2 id='log-in-with-steam-header'>Please log in with steam</h2>
   <%= link_to image_tag("http://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_large_border.png"), '/auth/steam' %>

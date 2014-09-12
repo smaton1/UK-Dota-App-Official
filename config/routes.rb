@@ -9,6 +9,8 @@ UKDotaAppOfficial::Application.routes.draw do
    root to: "home#index"
 
   post 'auth/steam/callback' => 'welcome#auth_callback'
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

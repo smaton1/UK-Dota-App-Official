@@ -1,16 +1,22 @@
-<div>
+<div id='users_search_page'>
 <h1>Listing users</h1>
 
+<%= search_form_for @q do |f| %>
+<p>
+  <%= f.label :steam_nickname %>
+  <%= f.text_field :steam_nickname_cont %>
+  <%= f.submit %>
+</p>
+
+<% end %>
+
 <table>
-  <tr>
-    <th>Steam nickname</th>
-    <th>Steam image</th>
-  </tr>
+ 
 
 <% @users.each do |user| %>
   <tr>
-    <td><a href="/users/<%= user.id %>"><%= user.steam_nickname %></a></td>
     <td><img src="<%= user.steam_image %>"></td>
+    <td><a href="/users/<%= user.id %>"><%= user.steam_nickname %></a></td>
   </tr>
 <% end %>
 </table>

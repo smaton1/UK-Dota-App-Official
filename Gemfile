@@ -11,6 +11,7 @@ gem 'omniauth-steam'
 gem 'figaro'
 gem 'pry-rails'
 gem 'gon'
+gem 'ransack'
 
 # Gems used only for assets and not required
 # in production environments by default.
