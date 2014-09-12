@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20140912135144) do
 
+
   create_table "chats", :force => true do |t|
     t.integer  "user_1_id"
     t.integer  "user_2_id"
