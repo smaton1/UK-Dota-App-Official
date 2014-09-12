@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :steam_id, :steam_image, :steam_nickname
+  attr_accessible :name, :steam_id, :steam_image, :steam_nickname, :matchlist
 
   has_many(:user_connections, :foreign_key => :user_1_id, :dependent => :destroy)
   has_many(:reverse_user_connections, :class_name => :UserConnection, :foreign_key => :user_2_id, :dependent => :destroy)
@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
     if  User.find_by_steam_nickname(auth.info.nickname)
       
       User.find_by_steam_nickname(auth.info.nickname)
+   
     else 
       user = User.new
       user.steam_id = auth.uid.to_i
@@ -19,6 +20,8 @@ class User < ActiveRecord::Base
       user
     end
   end
+
+
 
 
 end
