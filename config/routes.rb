@@ -13,6 +13,8 @@ UKDotaAppOfficial::Application.routes.draw do
 
   post 'auth/steam/callback' => 'welcome#auth_callback'
 
+  get 'rss_feeds/' => 'rss_feeds#index'
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
