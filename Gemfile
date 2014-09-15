@@ -12,6 +12,7 @@ gem 'figaro'
 gem 'pry-rails'
 gem 'gon'
 gem 'ransack'
+gem 'feedjira'
 
 # Gems used only for assets and not required
 # in production environments by default.

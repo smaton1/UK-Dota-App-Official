@@ -1,27 +1,31 @@
-<h1>Listing chats</h1>
+<%= hidden_field_tag("chat", value = "chat")%>
 
-<table>
-  <tr>
-    <th>User 1</th>
-    <th>User 2</th>
-    <th>Message</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="form" id="new_note">
+  <%= form_tag "", id: "post_chat" do |f|%>
+    <%= hidden_field_tag("current_user", value = current_user.id) %>
+    <%= hidden_field_tag("current_user_name", value = current_user.steam_nickname) %>
+    <%= hidden_field_tag("this_user", value = params[:id]) %>
+    <%= hidden_field_tag("this_user_name", value = params[:name]) %>
+    <div class="field">
+      <%= text_field_tag :message %>
+    </div>
+    <div class="actions">
+      <%= submit_tag value = "Submit" %>
+    </div>
+  <% end %>
+</div>
+<div class="table">
+  <table class="chat_table">
+    <thead>
+      <tr>
+        <th>Sender</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody id='tbody'>
+      <tr id='individual_message'></tr>
+    </tbody>
+  </table>
+</div>
 
-<% @chats.each do |chat| %>
-  <tr>
-    <td><%= chat.user_1_id %></td>
-    <td><%= chat.user_2_id %></td>
-    <td><%= chat.message %></td>
-    <td><%= link_to 'Show', chat %></td>
-    <td><%= link_to 'Edit', edit_chat_path(chat) %></td>
-    <td><%= link_to 'Destroy', chat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Chat', new_chat_path %>
