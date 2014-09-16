@@ -1,27 +1,22 @@
-<h1>Listing topics</h1>
+<h1 id='forum_title'>Welcome to the UK Dota forum!</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Created by</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <h3 id='new_topic_link'><%= link_to 'New Topic', new_topic_path %></h3>
 
 <% @topics.each do |topic| %>
-  <tr>
-    <td><%= topic.title %></td>
-    <td><%= topic.description %></td>
-    <td><%= topic.created_by %></td>
-    <td><%= link_to 'Show', topic %></td>
-    <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-    <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div id='topics'>
+    <div id='each_topic'>
+   <h2><%= topic.title %></h2>
+   <p><%= topic.description %></p><br>
+   <%= topic.created_by %>
+   <%= link_to 'Show', topic %><br>
+    <!-- <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+    <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+  </div>
+  </div><br>
 <% end %>
-</table>
+
 
 <br />
 
-<%= link_to 'New Topic', new_topic_path %>
+
+

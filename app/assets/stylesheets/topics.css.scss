@@ -1,3 +1,19 @@
-// Place all the styles related to the Topics controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#topics{
+      background-color: white;
+  color: black;
+  border-radius: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 10px;
+}
+#each_topic{
+    text-align: center;
+}
+
+#forum_title{
+    text-align: center;
+}
+
+#new_topic_link{
+    text-align: center;
+}
