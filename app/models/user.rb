@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many(:reverse_chats, :class_name => :Chat, :foreign_key => :user_2_id, :dependent => :destroy)
   has_many :users, :through => :chats, :source => :user_2
 
+  has_many :topics
+
   def self.find_for_steam_oauth(auth, signed_in_user=nil)
 
     if  User.find_by_steam_nickname(auth.info.nickname)
