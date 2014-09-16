@@ -1,9 +1,11 @@
 ---
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-ce0c36c8ad80c43afeb429193f657bc8.js
-application/index.js: application-ce0c36c8ad80c43afeb429193f657bc8.js
-application.css: application-a81106249632a2d1d2353290eb3b653d.css
-application/index.css: application-a81106249632a2d1d2353290eb3b653d.css
+reddit_logo.png: reddit_logo-22238763dc81af3f1d9007ea5ae2ee28.png
+reddit_logo/index.png: reddit_logo-22238763dc81af3f1d9007ea5ae2ee28.png
+application.js: application-11818316db3fd0865cfad9328898cd49.js
+application/index.js: application-11818316db3fd0865cfad9328898cd49.js
+application.css: application-011b1bb261283c674b8865f1595bfc34.css
+application/index.css: application-011b1bb261283c674b8865f1595bfc34.css
 jquery.min.map: jquery.min-e146c025d6a36461812bc97143056bd3.map
 jquery/index.min.map: jquery.min-e146c025d6a36461812bc97143056bd3.map
