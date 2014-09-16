@@ -18,6 +18,8 @@ UKDotaAppOfficial::Application.routes.draw do
 
   get 'rss_feeds/' => 'rss_feeds#index'
 
+  get 'teams/' => 'teams#index'
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
