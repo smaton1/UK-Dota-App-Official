@@ -12,6 +12,7 @@ class WelcomeController < ApplicationController
     :uid => auth.uid }
 
     @user = User.find_for_steam_oauth(request.env['omniauth.auth'], session[:current_user])
+    
 
 
     redirect_to root_url

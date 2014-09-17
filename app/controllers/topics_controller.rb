@@ -45,7 +45,6 @@ class TopicsController < ApplicationController
     @topic.created_by = current_user.steam_nickname
     respond_to do |format|
       if @topic.save
-        binding.pry
         format.html { redirect_to topics_path, notice: 'Topic was successfully created.' }
         format.json { render json: @topic, status: :created, location: @topic }
       else

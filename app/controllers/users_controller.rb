@@ -4,6 +4,9 @@ class UsersController < ApplicationController
   def index
     @q = User.search(params[:q])
     @users = @q.result(distinct: true)
+
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
@@ -21,7 +24,10 @@ class UsersController < ApplicationController
       res = Net::HTTP::get(url)
       @matchlist = JSON.load(res)['result']['matches'] || []
     end
-
+   
+    Match.save_match_from_matchlist(@matchlist, current_user) 
+     
+   
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }

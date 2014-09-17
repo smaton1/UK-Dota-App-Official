@@ -34,13 +34,13 @@
     </select>
   </div>
 
- <div id='match_history'>
-    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[0]["match_id"]%>">most recent game</a></li>
-    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[1]["match_id"]%>">most recent game</a></li>
-    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[2]["match_id"]%>">most recent game</a></li>
-    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[3]["match_id"]%>">most recent game</a></li>
-    <li><a href="http://www.dotabuff.com/matches/<%= @matchlist[4]["match_id"]%>">most recent game</a></li>
-
+  <div id='match_history'>
+    
+    <ul>
+      <% @user.matches.first(10).map do |match| %>
+      <li><a href="http://www.dotabuff.com/matches/<%= match.steam_id %>">most recent game</a></li>
+      <% end %>
+    </ul>
   </div> 
 
   

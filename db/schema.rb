@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140916122839) do
+ActiveRecord::Schema.define(:version => 20140916145741) do
 
   create_table "chats", :force => true do |t|
     t.integer  "user_1_id"
     t.integer  "user_2_id"
     t.string   "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "matches", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "steam_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

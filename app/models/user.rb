@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
   has_many :topics
 
+  has_many :matches
+
   def self.find_for_steam_oauth(auth, signed_in_user=nil)
 
     if  User.find_by_steam_nickname(auth.info.nickname)
@@ -26,8 +28,5 @@ class User < ActiveRecord::Base
       user
     end
   end
-
-
-
 
 end
