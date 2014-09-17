@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
+<div id='profile_nav_buttons'>
 <% if @user.id == current_user.id %>
-    <button id='show_profile'>Profile</button> | <button id='show_friends_list'>Friends</button>
+    <button id='show_profile'>Profile</button>  <button id='show_friends_list'>Friends</button>
   <%end%>
+</div>
 <div id='profile_page'>
   
   <div id='general_info'>
@@ -19,7 +21,7 @@
     <div class='general_info_specifics'>
     <% if @user.id != current_user.id %>
     <button id='add_friend'>Add to friends</button>
-    <button><%= link_to "Chat", chats_path(:id => @user.id, :name => @user.steam_nickname), :id => "chat" %></button>
+    <button><%= link_to "Send message", chats_path(:id => @user.id, :name => @user.steam_nickname), :id => "chat" %></button>
     <%end%>
 
     <% if @user.id == current_user.id %>
@@ -48,14 +50,15 @@
 <% if @user.id == current_user.id %>
 <div id='friends_list'>
 <h1>Friends List!</h1>
-
+<ul id='friends_list_names'>
 <% if current_user.user_connections %>
 <% current_user.user_connections.each do |user| %>
   <% user %>
-  <a href="/users/<%= user.user_2_id %>"><%= User.find(user.user_2_id).steam_nickname %></a>
+  <li><a href="/users/<%= user.user_2_id %>"><%= User.find(user.user_2_id).steam_nickname %></a></li><br>
  
 <% end %>
 <% end %>
+</ul>
 <%end%>
 
 <%= @user.matchlist %>

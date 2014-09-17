@@ -1,5 +1,4 @@
 <%= hidden_field_tag("chat", value = "chat")%>
-
 <div class="form" id="new_note">
   <%= form_tag "", id: "post_chat" do |f|%>
     <%= hidden_field_tag("current_user", value = current_user.id) %>
@@ -27,5 +26,6 @@
     </tbody>
   </table>
 </div>
+
 
 

@@ -67,3 +67,30 @@
 img{
   border-radius: 10px;
 }
+
+#show_profile{
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(66, 184, 221);
+}
+
+#show_friends_list{
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65); 
+}
+
+#profile_nav_buttons{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#friends_list_names{
+  list-style: none;
+  float: left;
+  margin-left: 20%;
+  margin-right: 20%;
+  
+}

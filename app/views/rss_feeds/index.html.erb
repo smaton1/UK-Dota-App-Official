@@ -9,7 +9,7 @@
 <% @feed["http://www.reddit.com/r/Dota2.rss"].entries.first(20).map do |entry| %>
 <p>
   <%= entry.title %><br>
-  <a href="<%= entry.url %>">link</a>
+  <a href="<%= entry.url %>" target="_blank">link</a>
 </p>
 
 <%end%>
