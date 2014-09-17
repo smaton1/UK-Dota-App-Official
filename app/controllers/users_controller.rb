@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     end
    
     Match.save_match_from_matchlist(@matchlist, current_user) 
-     
+   
    
     respond_to do |format|
       format.html # show.html.erb

@@ -35,10 +35,10 @@
   </div>
 
   <div id='match_history'>
-    
+    <h2> Ten most recent matches </h2>
     <ul>
       <% @user.matches.first(10).map do |match| %>
-      <li><a href="http://www.dotabuff.com/matches/<%= match.steam_id %>">most recent game</a></li>
+      <li><a href="http://www.dotabuff.com/matches/<%= match.steam_id %>">Match</a></li>
       <% end %>
     </ul>
   </div> 
@@ -46,8 +46,9 @@
   
 </div>
 
-<div id='friends_list' class='friends_list_hidden'>
+<div id='friends_list'>
 <h1>Friends List!</h1>
+
 <% if current_user.user_connections %>
 <% current_user.user_connections.each do |user| %>
   <% user %>
